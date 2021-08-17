@@ -7,5 +7,5 @@ const combinedReducers = combineReducers({
     adminAuth : AdminAuthReducer
 })
 
-const persistedReducers = persistReducer({key:'rootPersistor',storage,whitelist:['productSeen' , 'cart' , 'userAuth']},combinedReducers)
+const persistedReducers = persistReducer({key:'rootPersistor',storage,whitelist:['adminAuth']},combinedReducers)
 export default persistedReducers
