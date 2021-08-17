@@ -42,7 +42,7 @@ function LoginIndex() {
         if(phoneRegex.test(`${phoneNumber}`)){
             if (!loading){
                 setLoading(true)
-                axios.post('https://pcmarket-server-api.herokuapp.com/userLogin',{phoneNumber : phoneNumber})
+                axios.post('https://pcmarket-server-api.herokuapp.com/admin/userLogin',{phoneNumber : phoneNumber})
                     .then(res => {
                         setBox(2)
                         setLoading(false)
@@ -63,7 +63,7 @@ function LoginIndex() {
         setErrText(false)
         if (!loading){
             setLoading(true)
-            axios.post('https://pcmarket-server-api.herokuapp.com/userLogin/verifyCode',{phoneNumber : phoneNumber , verifyCode : code})
+            axios.post('https://pcmarket-server-api.herokuapp.com/admin/userLogin/verifyCode',{phoneNumber : phoneNumber , verifyCode : code})
                 .then(res => {
                     console.log(res.data)
                     if (res.data.fullName){
