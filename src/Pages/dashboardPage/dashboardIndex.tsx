@@ -131,7 +131,7 @@ export default function DashboardIndex() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Mini variant drawer
+                        PcMarket Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -158,6 +158,11 @@ export default function DashboardIndex() {
                     <ListItem style={{cursor : 'pointer'}}>
                         <ListItemIcon> <InboxIcon /> </ListItemIcon>
                         <ListItemText color={'secondary'} primary={'Add product'} />
+                    </ListItem>
+
+                    <ListItem onClick={()=> history.push('/dashboard/products')} style={{cursor : 'pointer'}}>
+                        <ListItemIcon> <InboxIcon /> </ListItemIcon>
+                        <ListItemText color={'secondary'} primary={'Products List'} />
                     </ListItem>
 
                     <ListItem onClick={()=> history.push('/dashboard/orders')} style={{cursor : 'pointer'}}>
